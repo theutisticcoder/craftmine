@@ -1,70 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CraftMine</title>
 </head>
+
 <body>
     <style>
-        div{
+        div {
             transform-style: preserve-3d;
             height: 50px;
             width: 50px;
         }
-        #cube{
+
+        #cube {
             left: 50px;
             top: 50px;
             position: absolute;
             perspective: 30px;
         }
-        #front{
+
+        #front {
             background-color: brown;
             position: absolute;
             translate: 0px 0px 25px;
 
-        } 
-        #back{
+        }
+
+        #back {
             background-color: brown;
             translate: 0px 0px -25px;
             position: absolute;
-        } 
-        #top{
+        }
+
+        #top {
             background-color: green;
             rotate: 90deg 0deg;
             translate: 0px -25px;
             position: absolute;
-        } 
-        #bottom{
+        }
+
+        #bottom {
             background-color: brown;
 
             rotate: 90deg 0deg;
             translate: 0px 25px;
             position: absolute;
-        } 
-        #left{
-background-color: brown;
+        }
+
+        #left {
+            background-color: brown;
             rotate: 0deg -90deg;
             translate: 25px 0px;
             position: absolute;
-        } 
-        #right{
+        }
+
+        #right {
             background: brown;
             rotate: 0deg 90deg;
             translate: -25px 0px;
             position: absolute;
-        } 
-           </style>
-<div id="cube">
-    <div id="front"></div>
-    <div id="back"></div>
-    <div id="top"></div>
-    <div id="bottom"></div>
-    <div id="left"></div>
-    <div id="right"></div>
-</div>
-<script>
-        
+        }
+    </style>
+    <div id="world">
+        <div id="cube" hidden>
+            <div id="front"></div>
+            <div id="back"></div>
+            <div id="top"></div>
+            <div id="bottom"></div>
+            <div id="left"></div>
+            <div id="right"></div>
+        </div>
+    </div>
+
+    <script>
+            var cube = document.querySelector("#cube");
+
+for(let i = 0; i < 100; i++){
+    for(let x = 0; x < 100; x++){
+        for(let y = 0; y < 100; y++){
+            cube = cube.cloneNode(true);
+            cube.hidden = false;
+            cube.style.transform = x*50 + "px" + y*50 + "px" + i * 50 + "px"
+            document.getElementById("world").appendChild(cube);
+}
+}
+}
     </script>
 </body>
+
 </html>
