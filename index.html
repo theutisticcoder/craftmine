@@ -10,7 +10,7 @@
 <body>
     <style>
         div {
-            border: 2px solid black;
+            border: 1pt solid black;
             transform-style: preserve-3d;
             height: 50px;
             width: 50px;
@@ -90,7 +90,7 @@ for(let i = 0; i < 10; i++){
         for(let y = 0; y < 10; y++){
             cube = cube.cloneNode(true);
             cube.hidden = false;
-            cube.style.translate = x*50 + "px " + y*50 + "px " + i * -50 + "px"
+            cube.style.translate = (x*50 + 25) + "px " + (y*50 + 25) + "px " + (i * -50 + 25) + "px"
             document.getElementById("world").appendChild(cube);
 }
 }
