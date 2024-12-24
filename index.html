@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CraftMine</title>
+</head>
+<body>
+    <style>
+        #cube{
+            position: absolute;
+            perspective: 60px;
+        }
+        #front{
+            background-color: brown;
+            position: absolute;
+            translate: 0px 0px 25px;
 
+        } 
+        #back{
+            background-color: brown;
+            translate: 0px 0px -25px;
+            position: absolute;
+        } 
+        #top{
+            background-color: green;
+            rotate: 90deg 0deg;
+            translate: 0px -25px;
+            position: absolute;
+        } 
+        #bottom{
+            background-color: brown;
+
+            rotate: 90deg 0deg;
+            translate: 0px 25px;
+            position: absolute;
+        } 
+        #left{
+background-color: brown;
+            rotate: 0deg 90deg;
+            translate: 25px 0px;
+            position: absolute;
+        } 
+        #right{
+            background: brown;
+            rotate: 0deg -90deg;
+            translate: -25px 0px;
+            position: absolute;
+        } 
+           </style>
+<div id="cube">
+    <div id="front"></div>
+    <div id="back"></div>
+    <div id="top"></div>
+    <div id="bottom"></div>
+    <div id="left"></div>
+    <div id="right"></div>
+</div>
+<script>
+        
+    </script>
+</body>
+</html>
